@@ -3,3 +3,6 @@
 .project
 .classpath
 target
+lib
+ivy-lib
+checkstyle_report.xml
