@@ -6,3 +6,7 @@ target
 lib
 ivy-lib
 checkstyle_report.xml
+
+#gradle files
+.gradle
+build
