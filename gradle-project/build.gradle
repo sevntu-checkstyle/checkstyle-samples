@@ -1,0 +1,30 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.7'
+}
+
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+sourceCompatibility = 1.7
+
+group = 'com.github.sevntu.checkstyle'
+version = '1.0.0-SNAPSHOT'
+
+
+checkstyle {
+   repositories {
+      mavenCentral()
+      maven {
+          url "http://sevntu-checkstyle.github.com/sevntu.checkstyle/maven2"
+      }
+   }
+   checkstyleClasspath = configurations.checkstyle
+   configurations {
+      checkstyle
+   }
+   dependencies{
+      checkstyle 'com.puppycrawl.tools:checkstyle:5.6'
+      checkstyle 'com.github.sevntu.checkstyle:sevntu-checks:1.8.0'
+   }
+}
+
