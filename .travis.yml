@@ -1,0 +1,6 @@
+language: java
+
+jdk:
+  - openjdk7
+
+script: "cd ant-project && ant checkstyle && cd ../gradle-project && ./gradlew check && cd ../maven-project && mvn checkstyle:check"
