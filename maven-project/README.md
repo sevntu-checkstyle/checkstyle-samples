@@ -1,1 +1,1 @@
-Launch command: "mvn site"
+Launch command: "mvn checkstyle:check" or "mvn site"
