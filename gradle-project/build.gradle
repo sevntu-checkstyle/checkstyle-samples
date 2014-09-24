@@ -22,6 +22,8 @@ checkstyle {
 
    checkstyleClasspath = configurations.checkstyle
    ignoreFailures = true
+   configFile = file("${project.rootDir}/checkstyle.xml")
+  
 
    configurations {
       checkstyle
