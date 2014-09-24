@@ -12,16 +12,21 @@ version = '0.0.1-SNAPSHOT'
 
 
 checkstyle {
+
    repositories {
       mavenCentral()
       maven {
           url "http://sevntu-checkstyle.github.com/sevntu.checkstyle/maven2"
       }
    }
+
    checkstyleClasspath = configurations.checkstyle
+   ignoreFailures = true
+
    configurations {
       checkstyle
    }
+
    dependencies{
       checkstyle 'com.puppycrawl.tools:checkstyle:5.7'
       checkstyle 'com.github.sevntu.checkstyle:sevntu-checks:1.11.0'
