@@ -31,7 +31,7 @@ checkstyle {
 
    dependencies{
       checkstyle 'com.puppycrawl.tools:checkstyle:5.7'
-      checkstyle 'com.github.sevntu.checkstyle:sevntu-checks:1.11.0'
+      checkstyle 'com.github.sevntu.checkstyle:sevntu-checks:1.12.0'
    }
 }
 

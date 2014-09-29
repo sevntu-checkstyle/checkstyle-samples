@@ -24,7 +24,7 @@
 					<dependency>
 						<groupId>com.github.sevntu.checkstyle</groupId>
 						<artifactId>sevntu-checkstyle-maven-plugin</artifactId>
-						<version>1.11.0</version>
+						<version>1.12.0</version>
 					</dependency>
 				</dependencies>
 				<!-- 	Specifying configuration here will take effect on the execution of "mvn checkstyle:checkstyle",
