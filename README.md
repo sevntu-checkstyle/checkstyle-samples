@@ -5,7 +5,7 @@ checkstyle-samples
 
 ==================
 
-Here you can find example how to use [sevntu.checkstyle](https://github.com/sevntu-checkstyle/sevntu.checkstyle) Checks in Maven and Ant and Gradle projects 
+Here you can find example how to use [sevntu.checkstyle](https://github.com/sevntu-checkstyle/sevntu.checkstyle) Checks in Maven and Ant and Gradle projects. 
 
 [travis]:http://travis-ci.org/sevntu-checkstyle/checkstyle-samples
 [travis img]:https://secure.travis-ci.org/sevntu-checkstyle/checkstyle-samples.png
