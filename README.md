@@ -1,6 +1,6 @@
-checkstyle-samples 
+Samples  of how to use Sevntu checks in Ant, Maven, Gradle
+
 [![][travis img]][travis]
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sevntu-checkstyle/checkstyle-samples/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 ==================
