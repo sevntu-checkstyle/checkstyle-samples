@@ -8,5 +8,7 @@
   <module name="TreeWalker">
     <!-- Currently the full path to custom checks are required -->
     <module name="com.github.sevntu.checkstyle.checks.coding.ReturnNullInsteadOfBoolean"/>
+    <!-- full path is not required for checks from main library -->
+    <!-- <module name="ConstantName"/> -->
   </module>
 </module>
