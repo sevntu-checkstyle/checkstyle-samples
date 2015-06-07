@@ -2,5 +2,19 @@ language: java
 
 jdk:
   - openjdk7
+  - oraclejdk8
 
 script: "cd ant-project && ant checkstyle && cd ../gradle-project && ./gradlew check && cd ../maven-project && mvn checkstyle:check"
+
+sudo: false
+
+cache:
+  directories:
+  - ~/.m2
+
+branches:
+  only:
+    - master
+
+matrix:
+  fast_finish: true
