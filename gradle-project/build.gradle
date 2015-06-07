@@ -10,6 +10,8 @@ sourceCompatibility = 1.7
 group = 'com.github.sevntu.checkstyle'
 version = '0.0.1-SNAPSHOT'
 
+checkstyle_version='6.7'
+sevntu_checks='1.13.3'
 
 checkstyle {
 
@@ -30,8 +32,8 @@ checkstyle {
    }
 
    dependencies{
-      checkstyle 'com.puppycrawl.tools:checkstyle:6.7'
-      checkstyle 'com.github.sevntu.checkstyle:sevntu-checks:1.13.2'
+      checkstyle 'com.puppycrawl.tools:checkstyle:${checkstyle_version}'
+      checkstyle 'com.github.sevntu.checkstyle:sevntu-checks:${sevntu_checks}'
    }
 }
 

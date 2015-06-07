@@ -11,6 +11,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<checkstyle.version>6.7</checkstyle.version>
+		<checkstyle.plugin.version>2.15</checkstyle.plugin.version>
+		<sevntu.checkstyle.plugin.version>1.13.3</sevntu.checkstyle.plugin.version>
 	</properties>
 
 
@@ -19,17 +22,17 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.15</version>
+				<version>${checkstyle.plugin.version}</version>
 				<dependencies>
 					<dependency>
 						<groupId>com.puppycrawl.tools</groupId>
 						<artifactId>checkstyle</artifactId>
-						<version>6.7</version>
+						<version>${checkstyle.version}</version>
 					</dependency>
 					<dependency>
 						<groupId>com.github.sevntu.checkstyle</groupId>
 						<artifactId>sevntu-checkstyle-maven-plugin</artifactId>
-						<version>1.13.2</version>
+						<version>${sevntu.checkstyle.plugin.version}</version>
 					</dependency>
 				</dependencies>
 				<!-- 	Specifying configuration here will take effect on the execution of "mvn checkstyle:checkstyle",
@@ -47,7 +50,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.15</version>
+				<version>${checkstyle.plugin.version}</version>
 				<!-- 	Specifying configuration here will take effect on the execution of "mvn site",
 					 but will not take effect on the execution of "mvn checkstyle:checkstyle"  -->
 				<configuration>
