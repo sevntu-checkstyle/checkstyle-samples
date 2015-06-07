@@ -11,6 +11,8 @@ sudo: false
 cache:
   directories:
   - ~/.m2
+  - ~/.gradle
+  - ~/.ivy2
 
 branches:
   only:
