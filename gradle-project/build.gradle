@@ -1,5 +1,5 @@
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.1'
+    gradleVersion = '2.4'
 }
 
 apply plugin: 'java'
@@ -10,10 +10,10 @@ sourceCompatibility = 1.7
 group = 'com.github.sevntu.checkstyle'
 version = '0.0.1-SNAPSHOT'
 
-checkstyle_version='6.7'
-sevntu_checks='1.13.3'
-
 checkstyle {
+
+   project.ext.checkstyleVersion = '6.7'
+   project.ext.sevntuChecksVersion = '1.13.3'
 
    repositories {
       mavenCentral()
@@ -22,7 +22,6 @@ checkstyle {
       }
    }
 
-   checkstyleClasspath = configurations.checkstyle
    ignoreFailures = true
    configFile = file("${project.rootDir}/checkstyle.xml")
   
@@ -32,8 +31,10 @@ checkstyle {
    }
 
    dependencies{
-      checkstyle 'com.puppycrawl.tools:checkstyle:${checkstyle_version}'
-      checkstyle 'com.github.sevntu.checkstyle:sevntu-checks:${sevntu_checks}'
+      assert project.hasProperty("checkstyleVersion")
+
+      checkstyle "com.puppycrawl.tools:checkstyle:${checkstyleVersion}"
+      checkstyle "com.github.sevntu.checkstyle:sevntu-checks:${sevntuChecksVersion}"
    }
 }
 
