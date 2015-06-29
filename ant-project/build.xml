@@ -23,8 +23,7 @@
             <fileset dir="lib" includes="*.jar"/>
 	</path>
 	<!-- Sevntu custom checks are retrieved by Ivy into lib folder and will be accessible to checkstyle-->
-	<taskdef resource="checkstyletask.properties" classpathref="checkstyle.lib.path"/>
-	<!-- as of 6.8 use new resource name <taskdef resource="checkstyle_ant_task.properties" classpathref="checkstyle.lib.path"/> -->
+	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties" classpathref="checkstyle.lib.path"/>
 </target>
 
 
