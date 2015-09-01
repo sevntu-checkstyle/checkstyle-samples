@@ -11,7 +11,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<checkstyle.version>6.10</checkstyle.version>
+		<checkstyle.version>6.10.1</checkstyle.version>
 		<checkstyle.plugin.version>2.15</checkstyle.plugin.version>
 		<sevntu.checkstyle.plugin.version>1.13.4</sevntu.checkstyle.plugin.version>
 	</properties>
