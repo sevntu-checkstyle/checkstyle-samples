@@ -10,3 +10,7 @@ checkstyle_report.xml
 #gradle files
 .gradle
 build
+
+#IntelliJ IDEA
+.idea/
+*.iml
