@@ -24,7 +24,11 @@ checkstyle {
 
    ignoreFailures = true
    configFile = file("${project.rootDir}/checkstyle.xml")
-  
+
+   //sourceSets = [sourceSets.main]
+   //showViolations = true
+   //reportsDir = file("$project.buildDir/checkstyleReports")
+   //configProperties = ['baseDir': "$project.projectDir"]
 
    configurations {
       checkstyle
