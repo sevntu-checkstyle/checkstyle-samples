@@ -12,36 +12,38 @@ version = '0.0.1-SNAPSHOT'
 
 checkstyle {
 
-   project.ext.checkstyleVersion = '6.17'
-   project.ext.sevntuChecksVersion = '1.20.0'
+  project.ext.checkstyleVersion = '6.17'
+  project.ext.sevntuChecksVersion = '1.20.0'
 
-   repositories {
-      mavenCentral()
-      maven {
-          url "http://sevntu-checkstyle.github.com/sevntu.checkstyle/maven2"
-      }
-   }
+  repositories {
+    mavenCentral()
+    maven {
+      url "http://sevntu-checkstyle.github.com/sevntu.checkstyle/maven2"
+    }
+  }
 
-   ignoreFailures = true
-   configFile = file("${project.rootDir}/checkstyle.xml")
+  ignoreFailures = true
+  configFile = file("${project.rootDir}/checkstyle.xml")
 
-   //sourceSets = [sourceSets.main]
-   //showViolations = true
-   //reportsDir = file("$project.buildDir/checkstyleReports")
-   //configProperties = ['baseDir': "$project.projectDir"]
+  //sourceSets = [sourceSets.main]
+  //showViolations = true
+  //reportsDir = file("$project.buildDir/checkstyleReports")
+  //configProperties = ['baseDir': "$project.projectDir"]
+
+  //https://discuss.gradle.org/t/some-checkstyle-rules-dont-work-in-gradle/16102/4
   checkstyleMain {
     source = sourceSets.main.allSource
   }
 
-   configurations {
-      checkstyle
-   }
+  configurations {
+    checkstyle
+  }
 
-   dependencies{
-      assert project.hasProperty("checkstyleVersion")
+  dependencies{
+    assert project.hasProperty("checkstyleVersion")
 
-      checkstyle "com.puppycrawl.tools:checkstyle:${checkstyleVersion}"
-      checkstyle "com.github.sevntu.checkstyle:sevntu-checks:${sevntuChecksVersion}"
-   }
+    checkstyle "com.puppycrawl.tools:checkstyle:${checkstyleVersion}"
+    checkstyle "com.github.sevntu.checkstyle:sevntu-checks:${sevntuChecksVersion}"
+  }
 }
 
