@@ -29,6 +29,9 @@ checkstyle {
    //showViolations = true
    //reportsDir = file("$project.buildDir/checkstyleReports")
    //configProperties = ['baseDir': "$project.projectDir"]
+  checkstyleMain {
+    source = sourceSets.main.allSource
+  }
 
    configurations {
       checkstyle
