@@ -4,7 +4,7 @@ jdk:
   - openjdk7
   - oraclejdk8
 
-script: >
+script: >-
   cd ant-project && ant checkstyle
     && cd ../gradle-project && ./gradlew clean check --debug --stacktrace
     && cd ../maven-project && mvn checkstyle:check
