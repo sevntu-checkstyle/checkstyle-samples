@@ -4,7 +4,10 @@ jdk:
   - openjdk7
   - oraclejdk8
 
-script: "cd ant-project && ant checkstyle && cd ../gradle-project && ./gradlew clean check --debug --stacktrace && cd ../maven-project && mvn checkstyle:check"
+script: >
+  cd ant-project && ant checkstyle
+    && cd ../gradle-project && ./gradlew clean check --debug --stacktrace
+    && cd ../maven-project && mvn checkstyle:check
 
 sudo: false
 
