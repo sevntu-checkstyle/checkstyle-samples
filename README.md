@@ -14,6 +14,6 @@ To launch examples use commands:
 
 [checkstyle-samples/ant-project]$ ant checkstyle
 
-[checkstyle-samples/gradle-project]$ ./gradlew
+[checkstyle-samples/gradle-project]$ ./gradlew clean check
 
-[checkstyle-samples/maven-project]$ mvn install
+[checkstyle-samples/maven-project]$ mvn checkstyle:check
