@@ -1,7 +1,7 @@
 <ivy-module version="2.0">
 	<info organisation="com.github.sevntu.checkstyle" module="sample" />
 	<dependencies>
-		<dependency org="com.puppycrawl.tools" name="checkstyle" rev="6.17" />
+		<dependency org="com.puppycrawl.tools" name="checkstyle" rev="6.18" />
 		<!--<dependency org="com.puppycrawl.tools" name="checkstyle" rev="6.12-SNAPSHOT" />-->
 		<dependency org="com.github.sevntu.checkstyle" name="sevntu-checks" rev="1.20.0" />
 	</dependencies>
