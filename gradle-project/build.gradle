@@ -7,7 +7,7 @@ apply plugin: 'checkstyle'
 
 sourceCompatibility = 1.7
 
-group = 'com.github.sevntu.checkstyle'
+group = 'com.github.sevntu-checkstyle'
 version = '0.0.1-SNAPSHOT'
 
 checkstyle {
