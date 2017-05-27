@@ -43,7 +43,7 @@ checkstyle {
     assert project.hasProperty("checkstyleVersion")
 
     checkstyle "com.puppycrawl.tools:checkstyle:${checkstyleVersion}"
-    checkstyle "com.github.sevntu.checkstyle:sevntu-checks:${sevntuChecksVersion}"
+    checkstyle "com.github.sevntu-checkstyle:sevntu-checks:${sevntuChecksVersion}"
   }
 }
 
