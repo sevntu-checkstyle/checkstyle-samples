@@ -6,7 +6,10 @@ jdk:
 script: >
   cd ant-project && ant checkstyle
   && cd ../gradle-project && ./gradlew clean check --debug --stacktrace
+  && rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
   && cd ../maven-project && mvn checkstyle:check
+  && rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
+  && cd ../maven-project && mvn checkstyle:check -Pgithub-maven-repo
 
 sudo: false
 
