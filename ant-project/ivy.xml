@@ -2,6 +2,6 @@
 	<info organisation="com.github.sevntu-checkstyle" module="sample" />
 	<dependencies>
 		<dependency org="com.puppycrawl.tools" name="checkstyle" rev="8.12" />
-		<dependency org="com.github.sevntu-checkstyle" name="sevntu-checks" rev="1.31.0" />
+		<dependency org="com.github.sevntu-checkstyle" name="sevntu-checks" rev="1.32.0" />
 	</dependencies>
 </ivy-module>
