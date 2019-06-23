@@ -11,7 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <checkstyle.version>8.22</checkstyle.version>
+        <!-- we use checkstyle 8.20 as latest compatible with sevntu -->
+        <checkstyle.version>8.20</checkstyle.version>
         <checkstyle.plugin.version>3.0.0</checkstyle.plugin.version>
         <sevntu.checkstyle.plugin.version>1.34.1</sevntu.checkstyle.plugin.version>
     </properties>

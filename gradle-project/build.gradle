@@ -12,7 +12,8 @@ version = '0.0.1-SNAPSHOT'
 
 checkstyle {
 
-  project.ext.checkstyleVersion = '8.22'
+  // we use checkstyle 8.20 as latest compatible with sevntu
+  project.ext.checkstyleVersion = '8.20'
   project.ext.sevntuChecksVersion = '1.34.1'
 
   repositories {
