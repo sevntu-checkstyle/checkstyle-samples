@@ -3,6 +3,6 @@
     <dependencies>
         <!-- we use checkstyle 8.20 as latest compatible with sevntu -->
         <dependency org="com.puppycrawl.tools" name="checkstyle" rev="8.20" />
-        <dependency org="com.github.sevntu-checkstyle" name="sevntu-checks" rev="1.34.1" />
+        <dependency org="com.github.sevntu-checkstyle" name="sevntu-checks" rev="1.35.0" />
     </dependencies>
 </ivy-module>
