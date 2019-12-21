@@ -14,7 +14,12 @@ script: >
   && rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
   && cd ../maven-project && mvn checkstyle:check
   && rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
-  && cd ../maven-project && mvn checkstyle:check -Pgithub-maven-repo
+  && cd ../maven-project
+  && mvn checkstyle:checkstyle -Pgithub-maven-repo
+# activate after 8.28 release
+#&& mvn -f pom-google-custom-suppression.xml clean checkstyle:checkstyle -Pgithub-maven-repo
+#&& grep "error" target/checkstyle-result.xml
+#&& mvn -f pom-google.xml clean checkstyle:checkstyle -Pgithub-maven-repo
 
 sudo: false
 
