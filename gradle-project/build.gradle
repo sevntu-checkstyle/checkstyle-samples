@@ -17,7 +17,8 @@ checkstyle {
 
   repositories {
     mavenCentral()
-    // we keep artifacts in maven central too, but this is just example of usage from our old maven repo on github
+    // we keep artifacts in maven central too,
+    // but this is just example of usage from our old maven repo on github
     maven {
       url "http://sevntu-checkstyle.github.com/sevntu.checkstyle/maven2"
     }

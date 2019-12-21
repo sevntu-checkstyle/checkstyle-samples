@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project xmlns:ivy="antlib:org.apache.ivy.ant" name="ant-sample" default="build" basedir=".">
 
-<!-- Run this sample with ant checkstyle and you will recieve checkstyle_report.xml 
+<!-- Run this sample with ant checkstyle and you will recieve checkstyle_report.xml
      file with one violation of ReturnNullInsteadOfBoolean check -->
 <!-- ##########################################################################
      ####################### target: checkstyle ###############################
@@ -9,7 +9,8 @@
 <target name="checkstyle"
         description="Generates a report of code convention violations."
 	depends="init-checkstyle">
-  <!-- See http://checkstyle.sourceforge.net/anttask.html for full options of using checkstyle with ant-->
+  <!-- See http://checkstyle.sourceforge.net/anttask.html
+       for full options of using checkstyle with ant-->
   <checkstyle config="checkstyle.xml"
               failureProperty="checkstyle.failure"
               failOnViolation="false">
@@ -22,8 +23,10 @@
 	<path id="checkstyle.lib.path">
             <fileset dir="lib" includes="*.jar"/>
 	</path>
-	<!-- Sevntu custom checks are retrieved by Ivy into lib folder and will be accessible to checkstyle-->
-	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties" classpathref="checkstyle.lib.path"/>
+	<!-- Sevntu custom checks are retrieved by Ivy into lib folder
+       and will be accessible to checkstyle-->
+	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
+           classpathref="checkstyle.lib.path"/>
 </target>
 
 
@@ -32,7 +35,7 @@
      ########################################################################## -->
     <target name="resolve" description="retrieve dependencies with ivy" depends="init-ivy">
     	<ivy:settings file="ivysettings.xml" />
-        <ivy:retrieve />    	
+        <ivy:retrieve />
     </target>
 
 
@@ -47,8 +50,9 @@
     <target name="download-ivy" unless="offline">
 
         <mkdir dir="${ivy.jar.dir}"/>
-        <!-- download Ivy from web site so that it can be used even without any special installation -->
-        <get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar" 
+        <!-- download Ivy from web site
+             so that it can be used even without any special installation -->
+        <get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar"
              dest="${ivy.jar.file}" usetimestamp="true"/>
     </target>
 
