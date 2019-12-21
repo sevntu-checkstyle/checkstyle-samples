@@ -20,7 +20,7 @@
     <build>
         <plugins>
             <!-- Specifying configuration here will take effect
-                 on the execution of "mvn checkstyle:check" or "mvn checkstyle:checkstyle",
+                 on the execution of "mvn checkstyle:checkstyle",
                  but will NOT take effect on the execution of "mvn site"  -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -41,26 +41,14 @@
                 <!-- https://maven.apache.org/plugins/maven-checkstyle-plugin/checkstyle-mojo.html -->
                 <!-- Properties for "mvn checkstyle:checkstyle" to execute without mvn build -->
                 <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
+                    <configLocation>google_checks.xml</configLocation>
                     <consoleOutput>true</consoleOutput>
-                    <failsOnError>false</failsOnError>
+                    <!-- failsOnError is not effective
+                         as in google_checks all violations as warning -->
+                    <failsOnError>true</failsOnError>
                     <!-- linkXRef=false to avoid WARNING 'Unable to locate Source XRef to link to' -->
                     <linkXRef>false</linkXRef>
                 </configuration>
-                <!-- https://maven.apache.org/plugins/maven-checkstyle-plugin/check-mojo.html -->
-                <!-- Properties for "mvn checkstyle:check" to execute as part of maven build
-                     They are conflicting with properties of checkstyle:checkstyle
-                     so only one set should be used
-                -->
-                <!--
-                <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
-                    <logViolationsToConsole>true</logViolationsToConsole>
-                    <consoleOutput>true</consoleOutput>
-                    <failOnViolation>true</failOnViolation>
-                    <failsOnError>false</failsOnError>
-                </configuration>
-                -->
             </plugin>
         </plugins>
     </build>
@@ -69,9 +57,7 @@
         <plugins>
             <!-- Specifying configuration here will take effect
                  on the execution of "mvn site",
-                 but will NOT take effect on the execution of "mvn checkstyle:check"
-                 or "mvn checkstyle:checkstyle"
-             -->
+                 but will NOT take effect on the execution of "mvn checkstyle:checkstyle"  -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
