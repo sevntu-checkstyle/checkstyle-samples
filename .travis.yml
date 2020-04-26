@@ -4,20 +4,29 @@ addons:
   apt:
     packages:
       - ant
+      - xmlstarlet
 
 jdk:
   - openjdk8
 
-script: >
-  cd ant-project && ant checkstyle
-  && cd ../gradle-project && ./gradlew clean check --debug --stacktrace
-  && rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
-  && cd ../maven-project
-  && mvn checkstyle:checkstyle -Pgithub-maven-repo
-# activate after 8.28 release
-#&& mvn -f pom-google-custom-suppression.xml clean checkstyle:checkstyle -Pgithub-maven-repo
-#&& grep "error" target/checkstyle-result.xml
-#&& mvn -f pom-google.xml clean checkstyle:checkstyle -Pgithub-maven-repo
+script:
+  - cd ant-project && ant checkstyle
+  - cd ../gradle-project && ./gradlew clean check --debug --stacktrace
+  - rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
+  - cd ../maven-project
+  - |
+    MVN_SETTINGS=${TRAVIS_HOME}/.m2/settings.xml
+    if [[ -f ${MVN_SETTINGS} ]]; then
+      if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
+        sed -i'' -e "/<mirrors>/,/<\/mirrors>/ d" $MVN_SETTINGS
+      else
+        xmlstarlet ed --inplace -d "//mirrors" $MVN_SETTINGS
+      fi
+    fi
+  - mvn checkstyle:checkstyle -Pgithub-maven-repo
+  - mvn -f pom-google-custom-suppression.xml clean checkstyle:checkstyle -Pgithub-maven-repo
+  - grep "error" target/checkstyle-result.xml
+  - mvn -f pom-google.xml clean checkstyle:checkstyle -Pgithub-maven-repo
 
 sudo: false
 
