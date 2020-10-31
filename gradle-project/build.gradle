@@ -12,7 +12,7 @@ version = '0.0.1-SNAPSHOT'
 
 checkstyle {
 
-  project.ext.checkstyleVersion = '8.36'
+  project.ext.checkstyleVersion = '8.37'
   project.ext.sevntuChecksVersion = '1.37.1'
 
   repositories {
