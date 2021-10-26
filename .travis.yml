@@ -1,13 +1,36 @@
+version: ~> 1.0
+dist: focal
+# this arch is required as is for Partner Queue Solution - DO NOT MODIFY
+arch: ppc64le
+
 language: java
+sudo: false
+
+cache:
+ apt: true
+ directories:
+   - ~/.m2
+  - ~/.gradle
+  - ~/.ivy2
 
 addons:
-  apt:
-    packages:
-      - ant
-      - xmlstarlet
+ apt:
+   packages:
+     - ant
+     - xmlstarlet
+
+branches:
+ only:
+   - master
+
+install:
+  -
 
 jdk:
   - openjdk8
+
+matrix:
+  fast_finish: true
 
 script:
   - cd ant-project && ant checkstyle
@@ -28,17 +51,3 @@ script:
   - grep "error" target/checkstyle-result.xml
   - mvn -f pom-google.xml clean checkstyle:checkstyle -Pgithub-maven-repo
 
-sudo: false
-
-cache:
-  directories:
-  - ~/.m2
-  - ~/.gradle
-  - ~/.ivy2
-
-branches:
-  only:
-    - master
-
-matrix:
-  fast_finish: true
