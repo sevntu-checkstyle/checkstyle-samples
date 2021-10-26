@@ -9,7 +9,7 @@ sudo: false
 cache:
  apt: true
  directories:
-   - ~/.m2
+  - ~/.m2
   - ~/.gradle
   - ~/.ivy2
 
