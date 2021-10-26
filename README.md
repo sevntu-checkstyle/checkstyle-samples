@@ -1,4 +1,4 @@
-Samples  of how to use Sevntu checks in Ant, Maven, Gradle
+Samples  of how to use Sevntu checks in Ant, Maven, Gradle.
 
 [![][travis img]][travis]
 
