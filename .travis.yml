@@ -27,7 +27,7 @@ install:
   -
 
 jdk:
-  - openjdk8
+  - openjdk11
 
 matrix:
   fast_finish: true
