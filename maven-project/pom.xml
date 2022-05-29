@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <checkstyle.version>10.2</checkstyle.version>
+        <checkstyle.version>10.3</checkstyle.version>
         <checkstyle.plugin.version>3.1.1</checkstyle.plugin.version>
         <sevntu.checkstyle.plugin.version>1.42.0</sevntu.checkstyle.plugin.version>
     </properties>
