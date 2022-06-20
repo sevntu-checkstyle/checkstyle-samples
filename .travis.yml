@@ -37,8 +37,9 @@ script:
   # - cd ant-project && ant checkstyle
   # until https://github.com/gradle/gradle/issues/19295
   # - cd ../gradle-project && ./gradlew clean check --debug --stacktrace
-  - rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
-  - cd ../maven-project
+  # - rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
+  # cd ../
+  - cd maven-project
   - |
     MVN_SETTINGS=${TRAVIS_HOME}/.m2/settings.xml
     if [[ -f ${MVN_SETTINGS} ]]; then
