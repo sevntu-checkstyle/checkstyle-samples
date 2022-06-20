@@ -33,7 +33,8 @@ matrix:
   fast_finish: true
 
 script:
-  - cd ant-project && ant checkstyle
+  # until https://github.com/sevntu-checkstyle/checkstyle-samples/issues/34
+  # - cd ant-project && ant checkstyle
   # until https://github.com/gradle/gradle/issues/19295
   # - cd ../gradle-project && ./gradlew clean check --debug --stacktrace
   - rm -rf ~/.m2/repository/com/github/sevntu-checkstyle/sevntu-checks
