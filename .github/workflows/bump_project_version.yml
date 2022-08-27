@@ -16,6 +16,9 @@ jobs:
     name: Bump CS version in REPO
     runs-on: ubuntu-latest
     steps:
+      - name: Install xmlstarlet
+        run: |
+          sudo apt-get install xmlstarlet
       - name: Checkout the latest code
         uses: actions/checkout@v2
         with:
