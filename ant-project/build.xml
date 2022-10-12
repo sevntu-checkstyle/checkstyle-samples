@@ -22,6 +22,22 @@
             <fileset dir="src" includes="**/*.java"/>
         </checkstyle>
 
+        <!-- secondary example if your classpath already includes checkstyle
+             and you want to include another jar with custom checks that is
+             in a custom location -->
+
+        <checkstyle config="checkstyle.xml"
+                    failOnViolation="false">
+            <classpath>
+                <!-- checkstyle's lib path -->
+                <pathelement path="${checkstyle.lib.path}"/>
+                <!-- custom jar with checks -->
+                <pathelement location="lib/sevntu-checks-1.42.0.jar"/>
+            </classpath>
+
+            <formatter type="xml" tofile="checkstyle_report.xml"/>
+            <fileset dir="src" includes="**/*.java"/>
+        </checkstyle>
     </target>
 
     <target name="init-checkstyle" depends="resolve">
