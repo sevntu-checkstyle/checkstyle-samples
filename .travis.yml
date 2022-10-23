@@ -53,9 +53,11 @@ script:
   - grep "error" target/checkstyle-result.xml
   - mvn -f pom-google.xml clean checkstyle:checkstyle -Pgithub-maven-repo
   - mvn site
+  - mvn checkstyle:checkstyle -Pgithub-maven-repo -Dcheckstyle.skip=true
   - cd ..
   - cd maven-ant-project
   - mvn verify
   - grep "error" target/checkstyle-result.xml
+  - mvn verify -Dcheckstyle.ant.skip=true
   - cd ..
 
