@@ -52,4 +52,9 @@ script:
   - mvn -f pom-google-custom-suppression.xml clean checkstyle:checkstyle -Pgithub-maven-repo
   - grep "error" target/checkstyle-result.xml
   - mvn -f pom-google.xml clean checkstyle:checkstyle -Pgithub-maven-repo
+  - cd ..
+  - cd maven-ant-project
+  - mvn verify
+  - grep "error" target/checkstyle-result.xml
+  - cd ..
 
