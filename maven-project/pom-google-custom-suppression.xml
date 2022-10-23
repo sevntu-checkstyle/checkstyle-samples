@@ -12,9 +12,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <checkstyle.version>8.31</checkstyle.version>
-        <checkstyle.plugin.version>3.1.1</checkstyle.plugin.version>
-        <sevntu.checkstyle.plugin.version>1.36.0</sevntu.checkstyle.plugin.version>
+        <checkstyle.version>10.3.4</checkstyle.version>
+        <checkstyle.plugin.version>3.2.0</checkstyle.plugin.version>
+        <sevntu.checkstyle.plugin.version>1.42.0</sevntu.checkstyle.plugin.version>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <build>
@@ -53,6 +56,13 @@
                         org.checkstyle.google.suppressionfilter.config=${project.basedir}/config/checkstyle-suppressions.xml
                     </propertyExpansion>
                 </configuration>
+            </plugin>
+
+            <!-- necessary for only running "mvn site" -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.12.1</version>
             </plugin>
         </plugins>
     </build>
