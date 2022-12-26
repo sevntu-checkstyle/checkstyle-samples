@@ -13,7 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <checkstyle.version>10.3.4</checkstyle.version>
-        <sevntu.checkstyle.plugin.version>1.42.0</sevntu.checkstyle.plugin.version>
+        <sevntu.checkstyle.plugin.version>1.44.1</sevntu.checkstyle.plugin.version>
         <antrun.plugin.version>3.1.0</antrun.plugin.version>
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
