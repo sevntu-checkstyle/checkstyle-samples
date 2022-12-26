@@ -10,7 +10,8 @@ fi
 VERSION=$1
 
 cd maven-project
-mvn versions:set-property -Dproperty=checkstyle.version -DnewVersion="$VERSION"
+mvn -e --no-transfer-progress versions:set-property -Dproperty=checkstyle.version \
+  -DnewVersion="$VERSION"
 rm pom.xml.versionsBackup
 
 echo "Version updated to $VERSION at maven-project/pom.xml"
