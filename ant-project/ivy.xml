@@ -3,7 +3,7 @@
 
     <dependencies>
         <dependency org="com.puppycrawl.tools" name="checkstyle" rev="10.5.0"/>
-        <dependency org="com.github.sevntu-checkstyle" name="sevntu-checks" rev="1.43.0"/>
+        <dependency org="com.github.sevntu-checkstyle" name="sevntu-checks" rev="1.44.1"/>
 
         <exclude org="org.jacoco"/>
         <exclude org="net.bytebuddy"/>
