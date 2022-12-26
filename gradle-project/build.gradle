@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 checkstyle {
 
   project.ext.checkstyleVersion = '10.5.0'
-  project.ext.sevntuChecksVersion = '1.43.0'
+  project.ext.sevntuChecksVersion = '1.44.1'
 
   repositories {
     mavenCentral()
