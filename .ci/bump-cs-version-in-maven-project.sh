@@ -11,7 +11,6 @@ VERSION=$1
 
 cd maven-project
 mvn -e --no-transfer-progress versions:set-property -Dproperty=checkstyle.version \
-  -DnewVersion="$VERSION"
-rm pom.xml.versionsBackup
+  -DnewVersion="$VERSION" -DgenerateBackupPoms=false
 
 echo "Version updated to $VERSION at maven-project/pom.xml"
