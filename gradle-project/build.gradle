@@ -12,6 +12,7 @@ checkstyle {
   project.ext.sevntuChecksVersion = '1.44.1'
 
   repositories {
+    mavenLocal()
     mavenCentral()
     // we keep artifacts in maven central too,
     // but this is just example of usage from our old maven repo on github
