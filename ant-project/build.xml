@@ -28,13 +28,6 @@
 
         <checkstyle config="checkstyle.xml"
                     failOnViolation="false">
-            <classpath>
-                <!-- checkstyle's lib path -->
-                <pathelement path="${checkstyle.lib.path}"/>
-                <!-- custom jar with checks -->
-                <pathelement location="lib/sevntu-checks-1.42.0.jar"/>
-            </classpath>
-
             <formatter type="xml" tofile="checkstyle_report.xml"/>
             <fileset dir="src" includes="**/*.java"/>
         </checkstyle>
