@@ -35,16 +35,18 @@
 
     <target name="init-checkstyle" depends="resolve">
 
-        <path id="checkstyle.lib.path">
+        <!-- checkstyle itself all dependecies and Sevntu custom checks
+             are retrieved by Ivy (see ivy.xml) into lib folder
+             and will be accessible to checkstyle-->
+        <path id="execution.lib.path">
             <fileset dir="lib" includes="*.jar"/>
         </path>
 
-        <!-- Sevntu custom checks are retrieved by Ivy into lib folder
-             and will be accessible to checkstyle-->
-
-        <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
-                 classpathref="checkstyle.lib.path"/>
-
+        <!-- loading ant task -->
+        <taskdef name="checkstyle"
+             classname="com.puppycrawl.tools.checkstyle.ant.CheckstyleAntTask"
+             classpathref="execution.lib.path"
+             />
     </target>
 
     <!-- ##########################################################################
