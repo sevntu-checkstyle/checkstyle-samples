@@ -2,7 +2,7 @@
     <info organisation="com.github.sevntu-checkstyle" module="sample"/>
 
     <dependencies>
-        <dependency org="com.puppycrawl.tools" name="checkstyle" rev="10.13.0"/>
+        <dependency org="com.puppycrawl.tools" name="checkstyle" rev="10.14.0"/>
         <dependency org="com.github.sevntu-checkstyle" name="sevntu-checks" rev="1.44.1"/>
 
         <exclude org="org.jacoco"/>
